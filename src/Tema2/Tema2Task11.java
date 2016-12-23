@@ -6,17 +6,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Тема 2 задача 1
+ * пїЅпїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅпїЅпїЅ 1
  * @author User
- * Ввести n строк с консоли, найти самую длинную строки. Вывести найденые строки и их      длины
+ * пїЅпїЅпїЅпїЅпїЅпїЅ n пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ      пїЅпїЅпїЅпїЅпїЅ
  *
  */
 
 public class Tema2Task11 {
 
+    private String test;
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        System.out.println("Введите пять строк");
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] arrayString = new String[5];
         int maxindex = -1;
@@ -30,22 +32,38 @@ public class Tema2Task11 {
                 e.printStackTrace();
 
             }
+            System.out.println();
+            System.out.println();
             if (maxindex < arrayString[index].length()) {
 
                 maxString = arrayString[index];
                 maxindex = arrayString[index].length();
 
-                /* а надо ли это делать
+                /* пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                 Math.max(arrayString[index - 1].length(), arrayString[index].length());
                 */
             }
         }
-        System.out.println("а вот самая длинная строка ))) " + maxString);
-        //System.out.println("а вот самая длинная строка ))) " + arrayString[maxindex]);
+        System.out.println("пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ ))) " + maxString);
+        //System.out.println("пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ ))) " + arrayString[maxindex]);
         for (int index = 0; index < arrayString.length; index++) {
-            System.out.println(arrayString[index] + " Длина строки равна " + arrayString[index].length());
+            System.out.println(arrayString[index] + " пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ " + arrayString[index].length());
         }
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Tema2Task11 that = (Tema2Task11) o;
+
+        return java.util.Objects.equals(this.test, that.test);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(test);
+    }
 }

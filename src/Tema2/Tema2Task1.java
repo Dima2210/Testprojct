@@ -34,13 +34,15 @@ public class Tema2Task1 {
             try {
                 list.add(reader.readLine());
             } catch (IOException e) {
-                System.out.println("� ��� ������ �� ������ �������� �� null");
+                System.out.println("А вОТ ошибочка возникла иза 1обработки  String ");
+
             }
         }
         // ���� ��� ������ �� ����� �������� ����� � ��������� �� ������� � ����� ����������� ����� ������ ������
         for (int index = 0; index < list.size(); index ++) {
             System.out.println("�������� ������; " + list.get(index) + "Ÿ ������ ����� " );
         }
+
         
         
 
